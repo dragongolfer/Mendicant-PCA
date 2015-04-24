@@ -17,21 +17,21 @@ class MendicantNodeFactory(object):
 
 
 class NodeManager(object):
-	def __init__(self):
+    def __init__(self):
 		self.nodelist = []
 		MendicantBot = MendicantNodeFactory()
 		self.botcount = 0
 	
-	def addNodeNamed(self, nodename):
-
-	def killNodeNamed(self, nodename):
-
-	def findNodeNamed(self, nodename):
-
-	def reallocateNodeNamed(self, nodename):
-
-	def rampantNodeCheck(self, nodename):
-
+    def addNodeNamed(self, nodename):
+        pass
+    def killNodeNamed(self, nodename):
+        pass
+    def findNodeNamed(self, nodename):
+        pass
+    def reallocateNodeNamed(self, nodename):
+        pass
+    def rampantNodeCheck(self, nodename):
+        pass
 
 
 

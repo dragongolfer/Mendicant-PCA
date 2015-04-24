@@ -1,4 +1,4 @@
-import MendicantBot0.3
+from MendicantBot03 import NodeManager
 ### creating user terminal will have to modify mendicantbot 0.2 and add functions 
 class UserControl(object):
 	def __init__(self):
