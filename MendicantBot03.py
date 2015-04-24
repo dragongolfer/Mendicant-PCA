@@ -1,4 +1,5 @@
 import pymongo
+from pymongo import MongoClient
 import json
 
 class MendicantBot(object):
@@ -39,9 +40,9 @@ class NodeManager(object):
 
 
 
-class MendicantArchive(object):
-	def __init__(self):
-	self.db = pymongo.MongoClient().Archive#creates connection to MongoDB and creates 'Archive' database
-	self.db.Archive.insert(data)#inserts into db
-	data = json.loads(Archive)#passes json into self.db.Archive.insert
-	db.Archive.save(self, Archive)#where data the bot has scraped is stored for recall later
+#class MendicantArchive(object):
+#	def __init__(self):
+#	    self.db = pymongo.MongoClient().Archive#creates connection to MongoDB and creates 'Archive' database
+#	    self.db.Archive.insert(data)#inserts into db
+#	    data = json.loads(Archive)#passes json into self.db.Archive.insert
+#	    db.Archive.save(self, Archive)#where data the bot has scraped is stored for recall later
