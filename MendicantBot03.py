@@ -12,6 +12,8 @@ class MendicantBot(object):#this works
 		print "This one is", self.nodename
 	def outro(self):
 		print "This one is", self.nodename
+	def getName(self):
+		return self.nodename 
 
 
 
@@ -38,23 +40,22 @@ class NodeManager(object):#this works
         newNode = self.nodeFactory.spawnNode(nodename)
         self.nodelist.append(newNode)
 
-    def killNodeNamed(self, nodename):#this function kills nodes that you chose and removes it #not working yet
-        chosenNode = None
+    def findNodeNamed(self, nodename):#this function findes nodes if its in nodelist above and works
         for node in self.nodelist:
-        	if node.nodename(nodename) is nodename:
-        		chosenNode = nodename
-        		break
+        	if nodename == node.getName():
+        		#print "you found my super awesome bot" + nodename #for debugging only
+        		return node
+        print "Node does not exist currently biologicals, please try again."
+
+    def killNodeNamed(self, nodename):#this function kills nodes that you chose #works
+        chosenNode = self.findNodeNamed(nodename)
         if chosenNode:
         	self.nodelist.remove(chosenNode)
+        	print "killed"
         else:
         	print "Node does not exist currently biologicals, please try again."
-    def findNodeNamed(self, nodename):#this function findes nodes if its in nodelist above
-        for node in self.nodelist:
-        	if nodename in self.nodelist:
-        		print self.nodelist[node]
-        	else:
-        		print "Node does not exist currently biologicals, please try again."
-        		break
+    
+      
 
     def reallocateNodeNamed(self, nodename):##add these later, harder to integrate
         pass

@@ -21,7 +21,7 @@ class UserControl(object):
 				elif decision == "2":
 					nodename = raw_input("Which node are you trying to find?\n^>>")
 					node = self.nm.findNodeNamed(nodename)#add/modify find nodename function in MendicantBot
-					print "We are", node
+					print "We are", node.getName()
 				elif decision == "3":
 					nodename = raw_input("Which node do you wish to reallocate\n^>>")
 					node = self.nm.reallocateNodeNamed(nodename)
