@@ -1,5 +1,7 @@
 #this program should start the UserControl function in MendicantTerminal
-from MendicantTerminal import UserControl
+#this works######################################################
+#this Calls Mendicant Terminal and imports and runs UserControl Class which contains initalize function
+from MendicantTerminal02 import UserControl
 
 uC = UserControl()
-uC.run()
+uC.initalize()
